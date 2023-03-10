@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1 class="text-center">Toys API documentation</h1>
+  <div class="container p-2">
+
+    <h3>to get toys</h3>
+    <ul>
+      <li>to get the first 10 toys:<span>domain/toys</span>(GET)</li>
+      <li>to get toys per page(in the example we try page 2):<span> domain/toys/?page=2</span>(GET)</li>
+      <li>to sort the results by property(in the example we try to sort by price):<span>
+          domain/toys/?sort=price</span>(GET)
+      </li>
+      <li>to reverse the order of the results (in the example we reverse the results of the price sort): <span>
+          domain/toys/?sort=price&&reverse=yes</span>(GET)</li>
+      <li>to search for results by name of toy or by the information of the toy(in the example we try to search a toy
+        with the word pazel in the name or info ): <span>domain/toys/search/?s=pazel</span>(GET)</li>
+      <li>to get a list of toys from a specific category(lets say sport category):
+        <span>domain/toys/category/?s=sport</span>(GET)
+      </li>
+      <li>to get a single toy by his id (in this example you need to change the "toy_id" with the actual id of the toy):
+        <span>domain/toys/single/toy_id</span>(GET)
+      </li>
+    </ul>
+
+    <h3>to post a new toy</h3>
+    <p class="text-center bg-danger">in order to post a toy you must log in with a user and you must send a valid
+      token</p>
+    <ul>
+      <li>
+        to create a new toy: <span>domain/toys</span>(POST)
+      </li>
+    </ul>
+    <p class="example">the schema to create a new toy: <br>
+      name: String, <br>
+      info: String, <br>
+      category: String,<br>
+      img_url: String, <br>
+      price: Number<br>
+    </p>
+    <h3>to edit a toy</h3>
+    <p class="text-center bg-danger">in order to edit a toy property you need to send a valid token</p>
+    <ul>
+      <li>to edit a toy(in this example you need to change the "toy_id" with the actual id of the toy):
+        <span>domain/toys/toy_id</span>(PUT)
+      </li>
+    </ul>
+    <h3>to delete a toy</h3>
+    <p class="text-center bg-danger">in order to delete a toy you must send a valid token</p>
+    <ul>
+      <li>to delete a toy(in this example you need to change the "toy_id" with the actual id of the toy):
+        <span>domain/toys/toy_id</span>(DELETE)
+      </li>
+    </ul>
+    <p>notice that you send an empty json in the body request: "{}"</p>
+    <h3>Sign up</h3>
+    <ul>
+      <li>to sign up: <span>domain/users</span>(POST)</li>
+    </ul>
+    <p class="example">
+      the schema to create a new user: <br>
+      name: String,<br>
+      email: String,<br>
+      password: String<br>
+    </p>
+
+    <h3>Log in:</h3>
+    <ul>
+      <li>to log in: <span>domain/users/login</span>(POST)</li>
+    </ul>
+    <p class="example">
+      the schema to log in: <br>
+      email: String,<br>
+      password: String<br>
+    </p>
+
+
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>

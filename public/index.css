@@ -1,0 +1,26 @@
+body {
+    background: silver;
+}
+
+span {
+    background: yellow;
+}
+
+li {
+    margin: 4px;
+}
+
+h3 {
+    text-align: center;
+    background: blue;
+    padding: 4px
+}
+
+.example {
+    text-align: center;
+    border: 2px solid black;
+}
+
+.look {
+    background: red;
+}
